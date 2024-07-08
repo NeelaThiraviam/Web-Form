@@ -1,0 +1,107 @@
+<html>
+<head>
+<style>
+    body {
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 110vh;
+        font-family: Times New Roman;
+    }
+    form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 80px;
+        align-self: flex-start;
+        margin-right: 600px;
+    }
+    label {
+        display: block;
+        margin: 0px;
+    }
+    .starlabel {     
+        color: red;
+    }
+
+    input textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-radius: 5px;    }
+    .dateInput {
+        display: block;  
+    }
+    input[type="submit"] {
+        background-color: blue;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+    }
+    input[type="submit"]:hover {
+        background-color: lightblue;
+    }
+    .submit-button {
+        display: flex;
+        justify-content: center;
+    }
+    .heading {
+        position: relative;
+        top: -315px;
+        left: 515px;
+    }
+</style>
+</head>
+<body>
+    <div class="heading">
+    <h2>LIFT ENQUIRY AGENT</h2>
+    </div>
+    <hr>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdM000004LtaH" method="POST">
+        <input type="hidden" name="oid" value="00DdM000004LtaH">
+        <input type="hidden" name="retURL" value="https://https://www.google.com/">
+
+        <label for="company">Company Name:<span aria-hidden="true" class="starlabel">*</span></label>
+        <input id="company" maxlength="40" name="company" type="text" required/>
+
+        <label for="email">Email:<span aria-hidden="true" class="starlabel">*</span></label>
+        <input id="email" maxlength="80" name="email" type="email" required/>
+
+        <label for="phone">Phone:</label>
+        <input id="phone" maxlength="10" name="phone" type="tel" />
+
+        <label for="fax">Fax:</label>
+        <input id="fax" maxlength="20" name="fax" type="text" />
+
+        <label for="Tender_Date__c">Tender Date:</label>
+        <span class="dateInput"><input id="Tender_Date__c" name="Tender_Date__c" type="text" placeholder="DD/MM/YYYY"/></span>
+
+        <label for="Name_of_the_Work__c">Name of the Work:</label>
+        <textarea id="Name_of_the_Work__c" name="Name_of_the_Work__c"></textarea>
+
+        <label for="Tenure__c">Tenure:</label>
+        <input id="Tenure__c" name="Tenure__c" type="number" />
+
+        <label for="Tender_Amount__c">Tender Amount:<span aria-hidden="true" class="starlabel">*</span></label>
+        <input id="Tender_Amount__c" name="Tender_Amount__c" type="text" required/>
+
+        <label for="Work_Completed_Date__c">Work Completed Date:<span aria-hidden="true" class="starlabel">*</span></label>
+        <span class="dateInput"><input id="Work_Completed_Date__c" name="Work_Completed_Date__c" type="text" placeholder="DD/MM/YYYY" required=true/></span>
+
+        <label for="Last_Date_of_Submission__c">Last Date of Submission:</label>
+        <span class="dateInput"><input id="Last_Date_of_Submission__c" name="Last_Date_of_Submission__c" type="text" placeholder="DD/MM/YYYY" /></span>
+
+        <div class="submit-button">
+        <input type="submit" name="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>
