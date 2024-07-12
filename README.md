@@ -2,102 +2,149 @@
 <head>
 <style>
 body {
-background-color: lightblue;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 110vh;
-font-family: Times New Roman;
+     background-color: lightblue;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 110vh;
+     font-family: Times New Roman;
 }
 form {
-background-color: white;
-padding: 20px;
-border-radius: 10px;
-margin-top: 80px;
-align-self: flex-start;
-margin-right: 600px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 80px;
+        align-self: flex-start;
+        margin-right: 80px;
 }
 label {
-display: block;
-margin: 0px;
+        display: block;
+        margin: 0px;
 }
-.starlabel {     
-color: red;
-}
-
-input textarea {
-width: 100%;
-padding: 8px;
-margin-top: 5px;
-margin-bottom: 15px;
-border-radius: 5px;    }
-.dateInput {
-display: block;  
-}
-input[type="submit"] {
-background-color: blue;
-color: white;
-padding: 10px;
-border-radius: 10px;
-cursor: pointer;
-display: flex;
-justify-content: center;
-margin-top: 10px;
-
-}
-input[type="submit"]:hover {
-background-color: lightblue;
-}
-.submit-button {
-display: flex;
-justify-content: center;
+.starLabel {    
+        color: red;
 }
 .heading {
-position: relative;
-top: -315px;
-left: 515px;
+        position: relative;
+        top: -315px;
+        left: 185px;
 }
+.submit-button {
+        display: flex;
+        justify-content: center;
+}
+
 </style>
 </head>
 <body>
 <div class="heading">
-<h2>LIFT ENQUIRY AGENT</h2>
+<h2>NEW LEAD</h2>
 </div>
-<hr>
 
-<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdM000004LtaH" method="POST">
-<input type="hidden" name="oid" value="00DdM000004LtaH">
-<input type="hidden" name="retURL" value="https://https://www.google.com/">
+<form>
+<label for="salutation">Salutation</label><select  id="salutation" name="salutation"><option value="">--None--</option><option value="Mr.">Mr.</option>
+<option value="Ms.">Ms.</option>
+<option value="Mrs.">Mrs.</option>
+<option value="Dr.">Dr.</option>
+<option value="Prof.">Prof.</option>
+<option value="Mx.">Mx.</option>
+</select><br>
 
-<label for="company">Company Name:<span aria-hidden="true" class="starlabel">*</span></label>
-<input id="company" maxlength="40" name="company" type="text" required/>
+<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
 
-<label for="email">Email:<span aria-hidden="true" class="starlabel">*</span></label>
-<input id="email" maxlength="80" name="email" type="email" required/>
+<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
 
-<label for="phone">Phone:</label>
-<input id="phone" maxlength="10" name="phone" type="tel" />
+<label for="title">Title</label><input  id="title" maxlength="40" name="title" size="20" type="text" /><br>
 
-<label for="fax">Fax:</label>
-<input id="fax" maxlength="20" name="fax" type="text" />
+<label for="mobile">Mobile</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
 
-<label for="Tender_Date__c">Tender Date:</label>
-<span class="dateInput"><input id="Tender_Date__c" name="Tender_Date__c" type="text" placeholder="DD/MM/YYYY"/></span>
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
 
-<label for="Name_of_the_Work__c">Name of the Work:</label>
-<textarea id="Name_of_the_Work__c" name="Name_of_the_Work__c"></textarea>
+<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
 
-<label for="Tenure__c">Tenure:</label>
-<input id="Tenure__c" name="Tenure__c" type="number" />
+<label for="lead_source">Lead Source</label><select  id="lead_source" name="lead_source"><option value="">--None--</option><option value="Web">Web</option>
+<option value="Phone Inquiry">Phone Inquiry</option>
+<option value="Partner Referral">Partner Referral</option>
+<option value="Purchased List">Purchased List</option>
+<option value="Other">Other</option>
+</select><br>
 
-<label for="Tender_Amount__c">Tender Amount:<span aria-hidden="true" class="starlabel">*</span></label>
-<input id="Tender_Amount__c" name="Tender_Amount__c" type="text" required/>
+<label for="industry">Industry</label><select  id="industry" name="industry"><option value="">--None--</option><option value="Agriculture">Agriculture</option>
+<option value="Apparel">Apparel</option>
+<option value="Banking">Banking</option>
+<option value="Biotechnology">Biotechnology</option>
+<option value="Chemicals">Chemicals</option>
+<option value="Communications">Communications</option>
+<option value="Construction">Construction</option>
+<option value="Consulting">Consulting</option>
+<option value="Education">Education</option>
+<option value="Electronics">Electronics</option>
+<option value="Energy">Energy</option>
+<option value="Engineering">Engineering</option>
+<option value="Entertainment">Entertainment</option>
+<option value="Environmental">Environmental</option>
+<option value="Finance">Finance</option>
+<option value="Food &amp; Beverage">Food &amp; Beverage</option>
+<option value="Government">Government</option>
+<option value="Healthcare">Healthcare</option>
+<option value="Hospitality">Hospitality</option>
+<option value="Insurance">Insurance</option>
+<option value="Machinery">Machinery</option>
+<option value="Manufacturing">Manufacturing</option>
+<option value="Media">Media</option>
+<option value="Not For Profit">Not For Profit</option>
+<option value="Recreation">Recreation</option>
+<option value="Retail">Retail</option>
+<option value="Shipping">Shipping</option>
+<option value="Technology">Technology</option>
+<option value="Telecommunications">Telecommunications</option>
+<option value="Transportation">Transportation</option>
+<option value="Utilities">Utilities</option>
+<option value="Other">Other</option>
+</select><br>
 
-<label for="Work_Completed_Date__c">Work Completed Date:<span aria-hidden="true" class="starlabel">*</span></label>
-<span class="dateInput"><input id="Work_Completed_Date__c" name="Work_Completed_Date__c" type="text" placeholder="DD/MM/YYYY" required=true/></span>
+<label for="currency"><span class="starLabel">*</span>Lead Currency</label><select  id="currency" name="currency"><option value="EUR">EUR - Euro</option>
+<option value="INR" selected="selected">INR - Indian Rupee</option>
+</select><br>
 
-<label for="Last_Date_of_Submission__c">Last Date of Submission:</label>
-<span class="dateInput"><input id="Last_Date_of_Submission__c" name="Last_Date_of_Submission__c" type="text" placeholder="DD/MM/YYYY" /></span>
+<input type="hidden"  id="member_status" name="member_status" value="" /><br>
+
+<label for="Interest">Product Interest:</label><select  id="00NdM000002yWdd" name="00NdM000002yWdd" title="Product Interest"><option value="">--None--</option><option value="GC1000 series">GC1000 series</option>
+<option value="GC5000 series">GC5000 series</option>
+<option value="GC3000 series">GC3000 series</option>
+<option value="Transformer 1">Transformer 1</option>
+<option value="Transformer 2">Transformer 2</option>
+<option value="Transformer 3">Transformer 3</option>
+<option value="Transformer 4">Transformer 4</option>
+</select><br>
+
+<label for="Generator">Current Generator(s):</label><input  id="00NdM000002yWda" maxlength="100" name="00NdM000002yWda" size="20" type="text" /><br>
+
+<label for="Location">Number of Locations:</label><input  id="00NdM000002yWdb" name="00NdM000002yWdb" size="20" type="text" /><br>
+
+<label for="Transformers">Need for Transformers:</label><input  id="00NdM0000033U8N" maxlength="50" name="00NdM0000033U8N" size="20" type="text" /><br>
+
+<label for="Voltage">Voltage Supply in Station:</label><select  id="00NdM0000033m9d" name="00NdM0000033m9d" title="Voltage Supply in Station"><option value="">--None--</option><option value="220V - 380V">220V - 380V</option>
+<option value="660V">660V</option>
+</select><br>
+
+<label for="Transformer">Transformer type:</label><select  id="00NdM0000033hcE" multiple="multiple" name="00NdM0000033hcE" title="Transformer type"><option value="1-phase construction transformer">1-phase construction transformer</option>
+<option value="3-phase construction transformer">3-phase construction transformer</option>
+<option value="Air core - dry transformers">Air core - dry transformers</option>
+<option value="Oil core insulation - oil transformer">Oil core insulation - oil transformer</option>
+<option value="Distribution transformer">Distribution transformer</option>
+<option value="Power transformer">Power transformer</option>
+<option value="Step up transformers">Step up transformers</option>
+<option value="Core type transformers">Core type transformers</option>
+<option value="Current transformer">Current transformer</option>
+<option value="Instrument transformer">Instrument transformer</option>
+<option value="Polyphase transformers">Polyphase transformers</option>
+</select><br>
+
+<label for="Organization">Organization Type:</label><select  id="00NdM0000034EKP" name="00NdM0000034EKP" title="Organization Type"><option value="">--None--</option><option value="Public Sector">Public Sector</option>
+<option value="Private Sector">Private Sector</option>
+<option value="Third Sector">Third Sector</option>
+</select><br>
 
 <div class="submit-button">
 <input type="submit" name="submit" value="Submit">
